@@ -5,22 +5,33 @@
 	<title> Drawing Guesser </title>
 </head>
 <body>
+	<script>
+		function goTo(url){
+			window.location.href=url
+		}
+	</script>
 	<ul>
 		<li><a class="active" href="page.html">Portfolio</a></li>
-		<li><a href="cooking.html">Cooking</a></li>
+		<! -- Cooking Page TBD -->
 	</ul>
-	<div class="bg1">
+	<div class="divider">Future</div>
+	<div class="bg2">
 		<div class="canvas">
-			<img src="assets/project_screenshots/hangmanpy.png"></img>
-			<div class="project-desc">
-				<h1> Hangman Game - Python </h1>
-				<a>Libraries: Pygame Date made: September 2020</a>
-				<a href="github.io.>
-			</div>
+			<a> Hi </a>
 		</div>
 	</div>
-	<div class="bg2">
-		<div class="caption">Some Work</div>
+	<div class="divider">November 2020</div>
+	<div class="bg1">
+		<div class="canvas">
+			<div class="screenshot">
+				<img src="assets/project_screenshots/hangmanpy.png"></img>
+			</div>
+			<div class="project-desc">
+				<h1> Hangman Game - Python </h1>
+				<a>Libraries: Pygame</a>
+				<button class="hangman-button" onclick="goTo('https://github.com/kenL4/Hangman')">Source Code</a>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
