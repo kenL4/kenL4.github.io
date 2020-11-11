@@ -1,5 +1,5 @@
 body, html {
-	background-color: #202020;
+	background-color: #ffffff;
 	height: 100%;
 	font-family: "Verdana", Geneva, sans-serif;
 }
@@ -59,7 +59,7 @@ li a:hover {
 	text-align: center;
 	float: right; 
     width:800px; 
-	background-color: #adaba6;
+	background-color: #f1f1f1;
     height:800px; 
 }
 .screenshot {
@@ -89,7 +89,4 @@ li a:hover {
 	border: none;
 	font-family: "Verdana", Geneva, sans-serif;
 	size: 150px 150px;
-}
-.Guess {
-	text-align: center;
 }

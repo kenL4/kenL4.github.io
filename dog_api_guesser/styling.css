@@ -1,5 +1,5 @@
 body, html {
-	background-color: #202020;
+	background-image: linear-gradient(to bottom right, blue, purple);
 	height: 100%;
 	font-family: "Verdana", Geneva, sans-serif;
 }
@@ -33,4 +33,22 @@ li a:hover {
 
 .Guess {
 	text-align: center;
+	background-color: transparent;
+}
+input {
+	outline: none;
+	background: transparent;
+}
+label {
+	color: white;
+}
+input {
+	color: white;
+}
+#Score {
+	font-size: 64px;
+	color: white;
+}
+#scoretext {
+	color: white;
 }

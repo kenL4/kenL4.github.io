@@ -8,15 +8,17 @@
 <body>
 	<ul>
 		<li><a href="../index.html">Portfolio</a></li>
-		<li><a class="active" href="cooking.html">Dog Guesser</a></li>
+		<li><a class="active" href="#dogguesser">Dog Guesser</a></li>
 	</ul>
+	<a id="Score">Score: </a>
 	<div class="Guess">
 		<img id="DogImage" src=""></img>
 		<form action="javascript:guessDog()">
 			<label for="guessbox">Dog breed:</label>
-			<input type="text" id="guessbox" name="guessbox"><br><br>
+			<input type="text" id="guessbox" name="guessbox"><br></br>
 			<input type="submit" value="Enter">
 		</form>
 	</div>
+	<a id="scoretext"></a>
 </body>
 </html>
