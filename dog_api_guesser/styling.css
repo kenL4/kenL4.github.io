@@ -51,7 +51,14 @@ canvas {
 	justify-content: center;
 	align-items: center;
 }
-
+#ai_guesser {
+	color: white;
+	font-size: 32px;
+}
+#ai_rightorwrong {
+	color: white;
+	font-size: 32px;
+}
 #Score {
 	font-size: 64px;
 	color: white;
