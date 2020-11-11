@@ -20,7 +20,7 @@ function imageReady() {
 }
 
 function setup() {
-	createCanvas(640, 480);
+	createCanvas(275, 183);
 	parrot = loadImage("parrot.jpg", imageReady);
 	classifier = ml5.imageClassifier('MobileNet', modelReady);
 }
