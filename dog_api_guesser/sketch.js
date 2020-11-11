@@ -19,6 +19,7 @@ function gotResults(error, data) {
 		for (i = 0; i < formattedGuesses.length; i++){
 			guess = formattedGuesses[i].toLowerCase()
 			correctGuess = guess == name.join(" ") || guess == name.reverse().join(" ")
+			//need to finish up logic on getting the correct answer as it doesn't work properly
 			if (correctGuess) {
 				correct = true;
 			}
