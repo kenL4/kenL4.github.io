@@ -45,6 +45,13 @@ label {
 input {
 	color: white;
 }
+canvas {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 #Score {
 	font-size: 64px;
 	color: white;
