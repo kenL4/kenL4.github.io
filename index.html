@@ -1,47 +1,74 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-	<link rel="stylesheet" href="styling.css">
-	<title> Portfolio </title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-	<script>
-		function goTo(url){
-			window.location.href=url
-		}
-	</script>
-	<ul>
-		<li><a class="active" href="#page">Portfolio</a></li>
-		<li><a href="dog_api_guesser/ai_guesser.html">Dog Guesser</a></li>
-	</ul>
-	<div class="divider">Future</div>
-	<div class="bg2">
-		<div class="canvas">
-			<div class="screenshot">
-				<img src="assets/project_screenshots/aidogguesser.png"></img>
-			</div>
-			<div class="project-desc">
-				<h1>Dog API Guesser</h1>
-				<a>APIs: dog-ceo-api</a><br>
-				<a>Libraries: p5, ml5</a><br><br>
-				<a>A machine learning project retrieving images from an API.</a><br>
-				<button class="dog-button" onclick="goTo('dog_api_guesser/ai_guesser.html')">Go To</button>
+	<header class="header">
+		<div class="overlay">
+			<div class="container">
+				<div class="description">
+				<h1> Welcome to my website. </h1>
+				<p> Caecilius est in horto </p>
+				<a class="btn btn-outline-info btn-lg" href="#projects">Go to projects</a>
 			</div>
 		</div>
-	</div>
-	<div class="divider">November 2020</div>
-	<div class="bg1">
-		<div class="canvas">
-			<div class="screenshot">
-				<img src="assets/project_screenshots/hangmanpy.png"></img>
+		<div class="projects">
+			<a name="projects"></a>
+			<div class="container">
+			<h1 class="text-center">Current Projects</h1><br>
+				<div class="row">
+					<div class="col-md-4 col-lg-4 col-sm-12">
+						<div class="card">
+							<div class="card-img">
+								<img src="assets/background_images/bg2.jpg" class="img-fluid">
+							</div>		 
+							<div class="card-body">
+								<h4 class="card-title">This Website</h4>
+								<p class="card-text">November 2020 - Present</p>
+							</div>
+							<div class="card-footer">
+								<a href="#" class="card-link">Here</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="project-desc">
-				<h1> Hangman Game - Python </h1>
-				<a>Libraries: Pygame</a>
-				<a>First project -> I made this game just for a little bit of fun</a>
-				<button class="hangman-button" onclick="goTo('https://github.com/kenL4/Hangman')">Source Code</a>
+			<div class="container">
+			<br><h1 class="text-center">Projects</h1><br>
+				<div class="row">
+					<div class="col-md-4 col-lg-4 col-sm-12">
+						<div class="card">
+							<div class="card-img">
+								<img src="assets/background_images/bg2.jpg" class="img-fluid">
+							</div>		 
+							<div class="card-body">
+								<h4 class="card-title">Hangman</h4>
+								<p class="card-text">November 202</p>
+							</div>
+							<div class="card-footer">
+								<a href="" class="card-link">Source</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</header>
+	<nav class="navbar navbar-expand-lg fixed top ">
+		<a class="navbar-brand" href="#">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="navbar navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" data-value="Projects" href="#projects">Projects</a></li>
+				<li class="nav-item"><a class="nav-link" data-value="about" href="#about">About</a></li>
+				<li class="nav-item"><a class="nav-link" data-value="contact" href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+	<script type="text/javascript" src='js/main.js'></script>
 </body>
 </html>
