@@ -6,13 +6,27 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
 	<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 	<script src="sketch.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-	<ul>
-		<li><a class="active" href="#page">Portfolio</a></li>
-		<li><a href="dog_api_guesser/ai_guesser.html">AI Dog Guesser</a></li>
-	</ul>
-	<a id="ai_guesser">I think it's a </a><br>
-	<a id="ai_rightorwrong"></a>
+	<nav class="navbar navbar-expand-lg fixed-top ">
+	  <a class="navbar-brand" href="../index.html">Home</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+	    <ul class="navbar-nav">
+	      <li class="nav-item"><a class="nav-link " data-value="projects" href="../index.html#projects">Projects</a></li>
+	      <li class="nav-item"> <a class="nav-link" data-value="about" href="../index.html#about">About</a></li>
+	      <li class="nav-item"><a class="nav-link " data-value="contact" href="../index.html#contact">Contact</a></li>
+	    </ul>
+	  </div>
+	</nav>
+	<div class="Guess">
+		<a id="ai_guesser">I think it's a </a><br>
+		<a id="ai_rightorwrong">...</a><br>
+		<button id="predict" onclick="predict()">Try again</a>
+	</div>
 </body>
 </html>

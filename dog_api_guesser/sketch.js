@@ -5,7 +5,7 @@ let message;
 
 function gotResults(error, data) {
 	console.log(message);
-	var correct = false;
+	var correct = true;
 	var name = message.slice(30, -1).split("/")[0].split("-");
 	if (error) {
 		console.error(error);
@@ -13,15 +13,13 @@ function gotResults(error, data) {
 		console.log(data);
 		var guess = document.getElementById('ai_guesser');
 		guess.innerHTML = "I think it's a " + data[0].label;
-		formattedGuesses = data[0].label.split(", ");
+		formattedGuesses = data[0].label.split(", ").join("");
+		formattedGuesses = formattedGuesses.split("-").join("").toLowerCase();
 		console.log(formattedGuesses);
-		console.log(name.join(" "));
-		for (i = 0; i < formattedGuesses.length; i++){
-			guess = formattedGuesses[i].toLowerCase()
-			correctGuess = guess == name.join(" ") || guess == name.reverse().join(" ")
-			//need to finish up logic on getting the correct answer as it doesn't work properly
-			if (correctGuess) {
-				correct = true;
+		console.log(name.join(""));
+		for (i = 0; i < name.length; i++){
+			if (formattedGuesses.includes(name[i]) != true) {
+				correct = false
 			}
 		}
 		if (correct) {
@@ -30,7 +28,7 @@ function gotResults(error, data) {
 			win.style.color = "green";
 		} else {
 			win = document.getElementById('ai_rightorwrong');
-			win.innerHTML = "Wrong";
+			win.innerHTML = "Wrong, it was a " + name.join(" ");
 			win.style.color = "red";
 		}
 	}
@@ -45,6 +43,10 @@ function imageReady() {
 function setup() {
 	var canvas = createCanvas(windowWidth/2, windowHeight/2);
 	canvas.position((windowWidth-width)/2, (windowHeight-height)/2); //centering it because css won't work
+	predict();
+}
+
+function predict(){
 	classifier = ml5.imageClassifier('MobileNet', randomDoggo);
 }
 

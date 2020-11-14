@@ -1,37 +1,29 @@
-body, html {
-	background-image: linear-gradient(to bottom right, blue, purple);
-	height: 100%;
-	font-family: "Verdana", Geneva, sans-serif;
+.navbar {
+	position: fixed top;
+	background-color: #3b8dd4;
 }
-
-ul {
-  list-style-type: none;
-  position: relative;
-  overflow: hidden;
-  background-color: #080808;
-  font-family: "Verdana", Geneva, sans-serif;
+.nav-link, .navbar-brand {
+	color: white;
+	cursor: pointer;
 }
-
-li {
-  float: left;
+.nav-link {
+	margin-right: 1px;
 }
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.nav-link:hover {
+	background: #4aacd6;
 }
-
-li a:hover {
-  background-color: #484848;
+.navbar-collapse {
+	justify-content: flex-end;
+}
+.navbar-toggler {
+	background: #4aacd6;
 }
 .active {
 	background-color: #003366;
 }
 
 .Guess {
+	margin-top: 50px;
 	text-align: center;
 	background-color: transparent;
 }
@@ -40,29 +32,29 @@ input {
 	background: transparent;
 }
 label {
-	color: white;
+	color: black;
 }
 input {
 	color: white;
 }
 canvas {
-	margin: 0;
+	margin-top: 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 #ai_guesser {
-	color: white;
+	color: black;
 	font-size: 32px;
 }
 #ai_rightorwrong {
-	color: white;
+	color: black;
 	font-size: 32px;
 }
 #Score {
 	font-size: 64px;
-	color: white;
+	color: black;
 }
 #scoretext {
-	color: white;
+	color: black;
 }
