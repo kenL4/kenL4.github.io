@@ -6,20 +6,30 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-	 <nav class="navbar navbar-expand-lg fixed-top ">
-	  <a class="navbar-brand" href="#">Home</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
+	<nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="index.html">Ken Lin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> 
+        </button>
 
-	  <div class="collapse navbar-collapse " id="navbarSupportedContent">
-	    <ul class="navbar-nav">
-	      <li class="nav-item"><a class="nav-link " data-value="projects" href="#projects">Projects</a></li>
-	      <li class="nav-item"> <a class="nav-link" data-value="about" href="#about">About</a></li>
-	      <li class="nav-item"><a class="nav-link " data-value="contact" href="#contact">Contact</a></li>
-	    </ul>
-	  </div>
-	</nav>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#projects">Projects
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cv">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacts">Contacts</a>
+                </li>
+            </ul>
+        </nav>
 	<header class="header">
 		<div class="overlay">
 			<div class="container">
@@ -53,16 +63,15 @@
 					<div class="col-md-4 col-lg-4 col-sm-12">
 						<div class="card">
 							<div class="card-img">
-								<img src="projectimg/dogai.png" class="img-fluid">
+								<img src="projectimg/bg2.jpg" class="img-fluid">
 							</div>		 
 							<div class="card-body">
-								<h4 class="card-title">AI Dog Guesser</h4>
-								<h6 class="card-text">November 2020</h6>
-								<a class="card-text">Gets dog from Dog API, uses ml5.js</a>
-								<a class="card-text">(high-level interface for tensor flow) to classify</a>
+								<h4 class="card-title">Expense Tracker</h4>
+								<h6 class="card-text">November 2020 - Present</h6>
+								<a class="card-text">A tracker made using matplotlib to track my daily expenses</a>
 							</div>
 							<div class="card-footer">
-								<a href="dog_api_guesser/ai_guesser.html" class="card-link">Run Here</a>
+								<a href="#" class="card-link">Here</a>
 							</div>
 						</div>
 					</div>
@@ -79,7 +88,7 @@
 							<div class="card-body">
 								<h4 class="card-title">Hangman</h4>
 								<h6 class="card-text">November 2020</h6>
-								<a class="card-text">A hangman clone that I made for fun using pygame and python</a>
+								<a class="card-text">A virtual hangman that I made for fun using pygame and python</a>
 							</div>
 							<div class="card-footer">
 								<a target="_blank" href="https://github.com/kenL4/Hangman" class="card-link">Source</a>
@@ -88,7 +97,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+	</div>
 	<script type="text/javascript" src='js/main.js'></script>
 </body>
 </html>
