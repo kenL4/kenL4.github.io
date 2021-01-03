@@ -41,25 +41,26 @@ var path = null;
 var mode = null;
 function setup() {
     let canv = createCanvas(window.innerWidth/2.54, window.innerHeight/1.24)
-    canv.center("horizontal");
+	canv.position(0, 100);
+	canv.center("horizontal");
     canv.mousePressed(canvMousePressed);
     buttonRun = createButton("Run")
-    buttonRun.position(0,0)
+    buttonRun.position(0,75)
     buttonRun.mousePressed(callBFS)
     buttonClear = createButton("Clear")
-    buttonClear.position(0,20)
+    buttonClear.position(0,105)
     buttonClear.mousePressed(clearPen)
     buttonWall = createButton("Wall")
-    buttonWall.position(0,40)
+    buttonWall.position(0,135)
     buttonWall.mousePressed(wallPen)
     buttonStart = createButton("Start Point")
-    buttonStart.position(0,60)
+    buttonStart.position(0,165)
     buttonStart.mousePressed(startPen)
     buttonEnd = createButton("End Point")
-    buttonEnd.position(0,80)
+    buttonEnd.position(0,195)
     buttonEnd.mousePressed(goalPen)
     buttonReset = createButton("Reset map")
-    buttonReset.position(0,100)
+    buttonReset.position(0,225)
     buttonReset.mousePressed(reset)
     mode = createP(("Drawing mode: " + String(type)), window.innerWidth/2, window.innerHeight/2);
     mode.center("horizontal")
