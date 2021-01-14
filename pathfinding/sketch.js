@@ -158,26 +158,26 @@ function pathFindBFS () {
         side.push([curr[curr.length - 1][0], curr[curr.length - 1][1] - 1]);
         queue.enqueue(side);
     }
-    if (hasleft && hastop) {
-        if (graph[curr[curr.length - 1][0] - 1][curr[curr.length - 1][1] - 1] == " ")
-            graph[curr[curr.length - 1][0] - 1][curr[curr.length - 1][1] - 1] = "-";
-        let side1 = Array.from(curr);
-        side1.push([curr[curr.length - 1][0] - 1, curr[curr.length - 1][1] - 1]);
-        queue.enqueue(side1);
-    }
-    if (hasleft && hasbottom) {
-        if (graph[curr[curr.length - 1][0] + 1][curr[curr.length - 1][1] - 1] == " ")
-            graph[curr[curr.length - 1][0] + 1][curr[curr.length - 1][1] - 1] = "-";
-        let side2 = Array.from(curr);
-        side2.push([curr[curr.length - 1][0] + 1, curr[curr.length - 1][1] - 1]);
-        queue.enqueue(side2);
-    }
     if (hasright) {
         if (graph[curr[curr.length - 1][0]][curr[curr.length - 1][1] + 1] == " ")
             graph[curr[curr.length - 1][0]][curr[curr.length - 1][1] + 1] = "-";
         let side3 = Array.from(curr);
         side3.push([curr[curr.length - 1][0], curr[curr.length - 1][1] + 1]);
         queue.enqueue(side3);
+    }
+    if (hastop) {
+        if (graph[curr[curr.length - 1][0] - 1][curr[curr.length - 1][1]] == " ")
+            graph[curr[curr.length - 1][0] - 1][curr[curr.length - 1][1]] = "-";
+        let side6 = Array.from(curr);
+        side6.push([curr[curr.length - 1][0] - 1, curr[curr.length - 1][1]]);
+        queue.enqueue(side6);
+    }
+    if (hasbottom) {
+        if (graph[curr[curr.length - 1][0] + 1][curr[curr.length - 1][1] - 1] == " ")
+            graph[curr[curr.length - 1][0] + 1][curr[curr.length - 1][1] - 1] = "-";
+        let side7 = Array.from(curr);
+        side7.push([curr[curr.length - 1][0] + 1, curr[curr.length - 1][1]]);
+        queue.enqueue(side7);
     }
     if (hasright && hastop) {
         if (graph[curr[curr.length - 1][0] - 1][curr[curr.length - 1][1] + 1] == " ")
@@ -193,19 +193,19 @@ function pathFindBFS () {
         side5.push([curr[curr.length - 1][0] + 1, curr[curr.length - 1][1] + 1]);
         queue.enqueue(side5);
     }
-    if (hastop) {
-        if (graph[curr[curr.length - 1][0] - 1][curr[curr.length - 1][1]] == " ")
-            graph[curr[curr.length - 1][0] - 1][curr[curr.length - 1][1]] = "-";
-        let side6 = Array.from(curr);
-        side6.push([curr[curr.length - 1][0] - 1, curr[curr.length - 1][1]]);
-        queue.enqueue(side6);
+    if (hasleft && hastop) {
+        if (graph[curr[curr.length - 1][0] - 1][curr[curr.length - 1][1] - 1] == " ")
+            graph[curr[curr.length - 1][0] - 1][curr[curr.length - 1][1] - 1] = "-";
+        let side1 = Array.from(curr);
+        side1.push([curr[curr.length - 1][0] - 1, curr[curr.length - 1][1] - 1]);
+        queue.enqueue(side1);
     }
-    if (hasbottom) {
+    if (hasleft && hasbottom) {
         if (graph[curr[curr.length - 1][0] + 1][curr[curr.length - 1][1] - 1] == " ")
             graph[curr[curr.length - 1][0] + 1][curr[curr.length - 1][1] - 1] = "-";
-        let side7 = Array.from(curr);
-        side7.push([curr[curr.length - 1][0] + 1, curr[curr.length - 1][1]]);
-        queue.enqueue(side7);
+        let side2 = Array.from(curr);
+        side2.push([curr[curr.length - 1][0] + 1, curr[curr.length - 1][1] - 1]);
+        queue.enqueue(side2);
     }
 };
 
