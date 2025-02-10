@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { ReactTyped } from 'react-typed';
 
-const Hero = ({ nextSectionRef }) => {
+const Hero = ({ nextSectionRef } : { nextSectionRef : any }) => {
 
     const handleTypingComplete = () => {
         setTimeout(() => {if (nextSectionRef.current) {
