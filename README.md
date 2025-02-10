@@ -1,3 +1,3 @@
-# My personal website
+# My Personal Website
 
-Feel free to look around the source code, if you wish!
+Welcome! Feel free to look around the source code.
