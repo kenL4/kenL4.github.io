@@ -13,6 +13,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
             >
                 Featured Projects
             </motion.h2>
@@ -24,8 +25,8 @@ export default function Projects() {
                         className={styles.card}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: '-50px' }}
-                        transition={{ delay: index * 0.1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                         <div className={styles.cardContent}>
                             <h3 className={styles.cardTitle}>{project.title}</h3>
@@ -39,12 +40,12 @@ export default function Projects() {
 
                             <div className={styles.links}>
                                 {project.links.demo && project.links.demo !== '#' && (
-                                    <a href={project.links.demo} className={styles.linkBtn}>
+                                    <a href={project.links.demo} className={styles.linkBtn} target="_blank" rel="noopener noreferrer">
                                         <ExternalLink size={16} /> Live Demo
                                     </a>
                                 )}
                                 {project.links.code && project.links.code !== '#' && (
-                                    <a href={project.links.code} className={styles.linkBtn}>
+                                    <a href={project.links.code} className={styles.linkBtn} target="_blank" rel="noopener noreferrer">
                                         <Github size={16} /> Source Code
                                     </a>
                                 )}
