@@ -1,16 +1,19 @@
-'use client'
-
-import Image from "next/image";
-import Hero from "./components/hero";
-import { useRef } from "react";
-import AboutMe from "./components/aboutme";
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Timeline from './components/Timeline';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function Home() {
-  const aboutMeRef = useRef<HTMLDivElement | null>(null);
-  return (
-    <div className="items-center justify-between">
-      <Hero nextSectionRef={aboutMeRef}/>
-      <AboutMe ref={aboutMeRef}/>
-    </div>
-  );
+    return (
+        <main>
+            <Navbar />
+            <Hero />
+            <Timeline />
+            <Projects />
+            <Contact />
+            <Footer />
+        </main>
+    );
 }
