@@ -51,7 +51,7 @@ export const projects = [
     {
         id: 3,
         title: "YENDOR",
-        description: "A programming dungeon crawler game implemented with a custom NetHack-inspired programming language. Made with two awesome friends for a game jam.",
+        description: "A programming dungeon crawler game implemented with a custom NetHack-inspired programming language. Won the game jam with 3 awesome friends.",
         tags: ["C", "GLSL", "JavaScript", "nh"],
         links: {
             demo: "https://olifog.itch.io/yendor",
