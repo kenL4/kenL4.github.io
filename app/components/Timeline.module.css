@@ -23,7 +23,7 @@
     bottom: 0;
     left: 20px;
     width: 2px;
-    background: var(--glass-border);
+    background: var(--border);
 }
 
 .item {
@@ -42,29 +42,27 @@
     top: 5px;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 0;
     background: var(--bg-primary);
-    border: 2px solid var(--text-accent);
+    border: 2px solid var(--text-primary);
     z-index: 1;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .item:hover .marker {
-    background: var(--text-accent);
-    box-shadow: 0 0 10px var(--text-accent);
+    background: var(--text-primary);
 }
 
 .content {
     background: var(--bg-card);
     padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid var(--glass-border);
-    transition: transform 0.3s ease;
+    border-radius: 0;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s ease;
 }
 
 .content:hover {
-    transform: translateX(10px);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-primary);
 }
 
 .role {
@@ -76,7 +74,7 @@
 
 .company {
     font-size: 1rem;
-    color: var(--text-accent);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 
@@ -121,6 +119,6 @@
     }
 
     .item:hover .content {
-        transform: translateY(-5px);
+        border-color: var(--text-primary);
     }
 }

@@ -10,16 +10,7 @@
 }
 
 .bgGlow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(232, 197, 71, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: -1;
+    display: none;
 }
 
 .content {
@@ -63,34 +54,32 @@
 .primaryBtn,
 .secondaryBtn {
     padding: 1rem 2rem;
-    border-radius: 50px;
+    border-radius: 0;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     font-size: 1rem;
 }
 
 .primaryBtn {
     background: var(--text-primary);
     color: var(--bg-primary);
-    border: 1px solid var(--text-primary);
+    border: 2px solid var(--text-primary);
 }
 
 .primaryBtn:hover {
-    background: transparent;
+    background: var(--bg-primary);
     color: var(--text-primary);
 }
 
 .secondaryBtn {
     background: transparent;
     color: var(--text-primary);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(4px);
+    border: 2px solid var(--border);
 }
 
 .secondaryBtn:hover {
     border-color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 768px) {

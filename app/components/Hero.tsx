@@ -17,11 +17,6 @@ export default function Hero() {
             >
                 <span className={styles.greeting}>Hi, I&apos;m Ken!</span>
 
-                <h1 className={styles.title}>
-                    Obsessed with <span className="text-gradient">Pixels</span> & <br />
-                    <span className="text-gradient">Performance</span>.
-                </h1>
-
                 <p className={styles.subtitle}>
                     I&apos;m a software engineer who loves digging into computer architecture and awesome computer graphics.
                     Whether it&apos;s writing a GPU simulator or a game engine, I love building systems that enable people to experience cool stuff!

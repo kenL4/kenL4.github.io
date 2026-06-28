@@ -1,7 +1,7 @@
 .contactSection {
     padding: 6rem 0;
     position: relative;
-    border-top: 1px solid var(--glass-border);
+    border-top: 1px solid var(--border);
 }
 
 .title {
@@ -9,10 +9,7 @@
     font-weight: 700;
     margin-bottom: 3rem;
     text-align: center;
-    background: var(--brand-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--text-primary);
 }
 
 /* Email Section */
@@ -38,9 +35,9 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 0;
     color: var(--text-secondary);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -48,9 +45,8 @@
 }
 
 .copyButton:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-accent);
-    border-color: var(--text-accent);
+    color: var(--text-primary);
+    border-color: var(--text-primary);
 }
 
 .copyLabel {
@@ -77,8 +73,7 @@
 }
 
 .socialLink:hover {
-    color: var(--text-accent);
-    transform: translateY(-4px);
+    color: var(--text-primary);
 }
 
 .socialLabel {
