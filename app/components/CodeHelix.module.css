@@ -11,11 +11,13 @@
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
+/* Desktop helix columns */
 .column {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 80px;
+    display: none;
 }
 
 .left {
@@ -110,17 +112,57 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .wrapper {
+/* Mobile rain */
+.mobileRain {
+    position: absolute;
+    inset: 0;
+}
+
+.mobileToken {
+    position: absolute;
+    top: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: var(--text-primary);
+    opacity: 0;
+    white-space: nowrap;
+    will-change: transform, opacity;
+    contain: layout style;
+    animation: rain 32s linear infinite;
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.15;
+    }
+    95% {
+        opacity: 0.1;
+    }
+    100% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+/* Show columns on desktop, hide rain */
+@media (min-width: 1025px) {
+    .column {
+        display: block;
+    }
+
+    .mobileRain {
         display: none;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .token {
-        animation: none !important;
-    }
-
     .wrapper {
         display: none;
     }
