@@ -3,7 +3,7 @@ export const experience = [
         id: 1,
         role: "Quantitative Developer Intern",
         company: "Xantium",
-        period: "Incoming Summer 2026",
+        period: "Summer 2026",
         description: "Working on cool financey stuff."
     },
     {

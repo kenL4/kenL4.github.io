@@ -39,7 +39,8 @@
 .marker {
     position: absolute;
     left: 11px;
-    top: 5px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 20px;
     height: 20px;
     border-radius: 0;
@@ -115,7 +116,7 @@
 
     .marker {
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
     }
 
     .item:hover .content {
