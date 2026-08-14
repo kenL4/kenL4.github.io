@@ -1,0 +1,127 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.column {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+}
+
+.left {
+    left: 2vw;
+}
+
+.right {
+    right: 2vw;
+}
+
+.strand {
+    position: absolute;
+    inset: 0;
+}
+
+.token {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: var(--text-primary);
+    opacity: 0;
+    white-space: nowrap;
+    will-change: transform, opacity;
+    contain: layout style;
+}
+
+.strandA .token {
+    animation: helixA 30s linear infinite;
+}
+
+.strandB .token {
+    animation: helixB 30s linear infinite;
+}
+
+@keyframes helixA {
+    0% {
+        transform: translate(-50%, 0) translateY(100vh) translateX(-15px);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.12;
+    }
+    25% {
+        transform: translate(-50%, 0) translateY(75vh) translateX(15px);
+        opacity: 0.18;
+    }
+    50% {
+        transform: translate(-50%, 0) translateY(50vh) translateX(-15px);
+        opacity: 0.12;
+    }
+    75% {
+        transform: translate(-50%, 0) translateY(25vh) translateX(15px);
+        opacity: 0.18;
+    }
+    95% {
+        opacity: 0.12;
+    }
+    100% {
+        transform: translate(-50%, 0) translateY(-20px) translateX(-15px);
+        opacity: 0;
+    }
+}
+
+@keyframes helixB {
+    0% {
+        transform: translate(-50%, 0) translateY(100vh) translateX(15px);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.12;
+    }
+    25% {
+        transform: translate(-50%, 0) translateY(75vh) translateX(-15px);
+        opacity: 0.18;
+    }
+    50% {
+        transform: translate(-50%, 0) translateY(50vh) translateX(15px);
+        opacity: 0.12;
+    }
+    75% {
+        transform: translate(-50%, 0) translateY(25vh) translateX(-15px);
+        opacity: 0.18;
+    }
+    95% {
+        opacity: 0.12;
+    }
+    100% {
+        transform: translate(-50%, 0) translateY(-20px) translateX(15px);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .token {
+        animation: none !important;
+    }
+
+    .wrapper {
+        display: none;
+    }
+}
